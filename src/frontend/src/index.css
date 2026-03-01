@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Light mode - warm professional */
+    --background: 0.97 0.005 80;
+    --foreground: 0.18 0.02 60;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 60;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 60;
+    --primary: 0.72 0.18 55;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.94 0.01 80;
+    --secondary-foreground: 0.25 0.02 60;
+    --muted: 0.93 0.01 80;
+    --muted-foreground: 0.52 0.02 60;
+    --accent: 0.72 0.18 55;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.58 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.88 0.01 80;
+    --input: 0.88 0.01 80;
+    --ring: 0.72 0.18 55;
+
+    /* Calendar state colors */
+    --cal-full: 0.62 0.17 145;
+    --cal-partial: 0.72 0.18 55;
+    --cal-sunday: 0.58 0.22 27;
+    --cal-leave: 0.62 0.17 200;
+
+    --chart-1: 0.72 0.18 55;
+    --chart-2: 0.62 0.17 145;
+    --chart-3: 0.62 0.17 200;
+    --chart-4: 0.58 0.22 27;
+    --chart-5: 0.65 0.15 300;
+
+    --sidebar: 0.97 0.005 80;
+    --sidebar-foreground: 0.18 0.02 60;
+    --sidebar-primary: 0.72 0.18 55;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.94 0.01 80;
+    --sidebar-accent-foreground: 0.25 0.02 60;
+    --sidebar-border: 0.88 0.01 80;
+    --sidebar-ring: 0.72 0.18 55;
+  }
+
+  .dark {
+    /* Dark charcoal with amber/gold accents */
+    --background: 0.14 0.01 260;
+    --foreground: 0.95 0.01 80;
+    --card: 0.19 0.01 260;
+    --card-foreground: 0.95 0.01 80;
+    --popover: 0.22 0.01 260;
+    --popover-foreground: 0.95 0.01 80;
+    --primary: 0.78 0.18 75;
+    --primary-foreground: 0.12 0.02 60;
+    --secondary: 0.24 0.01 260;
+    --secondary-foreground: 0.85 0.01 80;
+    --muted: 0.24 0.01 260;
+    --muted-foreground: 0.58 0.01 260;
+    --accent: 0.78 0.18 75;
+    --accent-foreground: 0.12 0.02 60;
+    --destructive: 0.65 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 12%;
+    --ring: 0.78 0.18 75;
+
+    /* Calendar state colors - dark mode */
+    --cal-full: 0.65 0.18 145;
+    --cal-partial: 0.72 0.18 75;
+    --cal-sunday: 0.62 0.22 27;
+    --cal-leave: 0.65 0.18 200;
+
+    --chart-1: 0.78 0.18 75;
+    --chart-2: 0.65 0.18 145;
+    --chart-3: 0.65 0.18 200;
+    --chart-4: 0.65 0.22 27;
+    --chart-5: 0.68 0.15 300;
+
+    --sidebar: 0.19 0.01 260;
+    --sidebar-foreground: 0.95 0.01 80;
+    --sidebar-primary: 0.78 0.18 75;
+    --sidebar-primary-foreground: 0.12 0.02 60;
+    --sidebar-accent: 0.24 0.01 260;
+    --sidebar-accent-foreground: 0.85 0.01 80;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.78 0.18 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+  }
+}
+
+@layer utilities {
+  .timer-display {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.05em;
+  }
+
+  .earnings-display {
+    font-family: "Inter", sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
